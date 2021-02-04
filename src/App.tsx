@@ -1,9 +1,13 @@
 import React from 'react';
 import './app.css'
-import Navbar from './core/components/Navbar';
+import Routes from './Routes';
 
-const App = () => (
-    <Navbar />
-)
+
+const App = () => {
+    return (
+        <Routes />
+    )
+
+}
 
 export default App;

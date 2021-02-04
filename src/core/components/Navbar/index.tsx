@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 const Navbar = () => (
     <nav className="main-navbar">
         <div className="logo-container">
-            <a href="xxx" className="nav-logo-text">
+            <Link to="/" className="nav-logo-text">
                 <h4 >
                     Bootcamp DevSuperior
                 </h4>
-            </a>
+            </Link>
         </div>
     </nav>
 )
