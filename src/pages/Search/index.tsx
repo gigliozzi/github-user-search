@@ -11,7 +11,7 @@ const Search = () => {
                 <h1>Encontre um perfil Github</h1>
             </div>
             <div className="search-box">
-                <input type="text"/>
+                <input type="text" placeholder="Usuário Github"/>
             </div>
             <div className="search-button">
                 <ButtonDefault value="Encontrar" />
