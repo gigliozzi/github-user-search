@@ -1,0 +1,93 @@
+.search-result-container {
+    width: 1250px;
+    height: 390px;
+    background: #f5f4f4;
+    border-radius: 8px;
+    margin-top: 54px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box-image {
+    width: 280px;
+    height: 280px;
+    position: relative;
+    top: 23px;
+    left: 23px;
+    border: solid 1px black;
+}
+
+.button-container {
+    position: relative;
+    left: 23px;
+}
+
+input {
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    height: 22px;
+    width: 163px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #595959;
+    display: inline;
+    margin-right: 8px;
+}
+
+.result-info-container {
+    width: 870px;
+    height: 280px;
+    position: relative;
+    top: -399px;
+    left: -30px;
+    float: right;
+    box-sizing: border-box;
+}
+
+.result-personal-container {
+    width: 850px;
+    height: 250px;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    position: relative;
+    top: -360px;
+    left: 358px;
+    border-radius: 6px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.result-personal-container h5 {
+    color: #1890FF;
+    font-size: 20px;
+    margin-left: 13px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.result-personal-container div{
+    width: 800px;
+    height: 40px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    line-height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    padding-left: 12px;
+    color: #737373;
+}
+
+.info-github {
+    width: 830px;
+    height: 40px;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}

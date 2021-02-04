@@ -22,17 +22,13 @@
     border-radius: 4px;
     height: 40px;
     width: 676px;
-    border-radius: 4px;
     position: absolute;
     top: 230px;
     left: 149px;
     padding: 8px auto 8px auto;
 }
 
-input {
-    background: #ffffff;
-    border: 1px solid #d9d9d9;
-    border-radius: 4px;
+/* input[type=text] {
     height: 40px;
     width: 676px;
     font-size: 16px;
@@ -42,12 +38,15 @@ input {
     padding-left: 20px;
 }
 
-input::placeholder{
+input[type=text]::placeholder{   
+    border: none; 
+    height: 50px;
+    width: 676px;
     font-size: 16px;
     font-weight: 300;
     line-height: 24px;
     color:  #BFBFBF;
-}
+}  */
 
 .search-button {
     position: absolute;
