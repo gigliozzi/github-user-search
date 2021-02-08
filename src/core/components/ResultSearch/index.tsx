@@ -1,30 +1,52 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import ButtonDefault from '../Button';
-import './styles.css'
+import GithubLogo from '../../assets/github-icon.svg';
+import '../../types/Users';
+import './styles.css';
+import { UsersResponse } from '../../types/Users';
+
 
 const ResultSearch = () => {
+
+    const [usersResponse, setUsersResponse] = useState<UsersResponse>();
+
+    console.log(usersResponse?.company);
+    console.log(usersResponse?.blog);
+    console.log(usersResponse?.location);
+    console.log(usersResponse?.created_at);
+    console.log(usersResponse?.followers);
+    console.log(usersResponse?.public_repos);
+    console.log(usersResponse?.following);
+
+    useEffect(() => {
+        axios('https://api.github.com/users/gabrielsantos')
+            .then(response => setUsersResponse(response.data));
+    }, []);
 
     return (
         <div className="search-result-container">
             <div className="box-image">
-                <img src="link" alt="name"/>
-            </div>
-            <div className="button-container">
-                <ButtonDefault value="Ver perfil"/>
+                <img src={usersResponse?.avatar_url} alt="RESULT SEARCH" />
             </div>
 
+            <a href="https://github.com/gabrielsantos" target="blank">
+                <div className="button-container">
+                    <ButtonDefault value="Ver perfil" />
+                </div>
+            </a>
             <div className="result-info-container">
-                <input type="text" value="Repositório publicos: {text}" className=""/>
-                <input type="text" value="Seguidores: {text}" className=""/>
-                <input type="text" value="Seguindo: {text}" className=""/>
+                <div>Repositórios públicos: <span>{usersResponse?.public_repos}</span></div>
+                <div>Seguidores: <span>{usersResponse?.followers}</span></div>
+                <div>Seguindo: <span>{usersResponse?.following}</span></div>
             </div>
-            
+
             <div className="result-personal-container">
                 <h5>Informações</h5>
-                <div>Empresa: <span>{"text"}</span></div> 
-                <div>Website/Blog: <span>{}</span></div>
-                <div>Localidade: <span>{}</span></div>
-                <div>Membro desde: <span>{}</span></div>
+                <div>Empresa: <span>{usersResponse?.company}</span></div>
+                <div>Site: <span>{usersResponse?.blog}</span></div>
+                <div>Localidade: <span>{usersResponse?.location}</span></div>
+                <div>Membro desde: <span>{usersResponse?.created_at}</span></div>
             </div>
         </div>
     );

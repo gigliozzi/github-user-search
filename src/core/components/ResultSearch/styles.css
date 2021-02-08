@@ -10,19 +10,35 @@
 
 .box-image {
     width: 280px;
-    height: 280px;
+    height: 288px;
     position: relative;
-    top: 23px;
+    top: 27px;
     left: 23px;
     border: solid 1px black;
+}
+
+.box-image img {
+    width: 280px;
+    height: 288px;
 }
 
 .button-container {
     position: relative;
     left: 23px;
+    margin-top: 20px;
 }
 
-input {
+.result-info-container {
+    width: 870px;
+    height: 280px;
+    position: relative;
+    top: -375px;
+    left: -30px;
+    float: right;
+    box-sizing: border-box;
+}
+
+.result-info-container div {
     background: #fff;
     border: 1px solid #d9d9d9;
     border-radius: 4px;
@@ -32,18 +48,10 @@ input {
     font-weight: 300;
     line-height: 24px;
     color: #595959;
+    box-sizing: border-box;
     display: inline;
     margin-right: 8px;
-}
-
-.result-info-container {
-    width: 870px;
-    height: 280px;
-    position: relative;
-    top: -399px;
-    left: -30px;
-    float: right;
-    box-sizing: border-box;
+    padding: 5px 14px;
 }
 
 .result-personal-container {
@@ -52,22 +60,22 @@ input {
     background: #fff;
     border: 1px solid #d9d9d9;
     position: relative;
-    top: -360px;
-    left: 358px;
+    top: -340px;
+    left: 350px;
     border-radius: 6px;
     padding-top: 10px;
     position: relative;
 }
 
 .result-personal-container h5 {
-    color: #1890FF;
+    color: #1890ff;
     font-size: 20px;
-    margin-left: 13px;
+    margin-left: 20px;
     margin-top: 0px;
     margin-bottom: 20px;
 }
 
-.result-personal-container div{
+.result-personal-container div {
     width: 800px;
     height: 40px;
     border: 1px solid #d9d9d9;
@@ -75,9 +83,14 @@ input {
     line-height: 40px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
     padding-left: 12px;
     color: #737373;
+}
+
+.result-personal-container span {
+    color: #737373;
+    font-weight:lighter;
 }
 
 .info-github {

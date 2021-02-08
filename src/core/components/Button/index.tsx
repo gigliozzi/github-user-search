@@ -3,9 +3,11 @@ import './styles.css';
 
 type Props = {
     value: string;
+    type?: string;
+    onclick?: string;
 }
 
-const ButtonDefault = ({value}: Props) => {
+const ButtonDefault = ({value, type, onclick}: Props) => {
     return (
         <button>
             {value}
