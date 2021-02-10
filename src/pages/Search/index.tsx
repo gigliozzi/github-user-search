@@ -4,22 +4,34 @@ import ButtonDefault from '../../core/components/Button';
 // import ResultSearch from '../../core/components/ResultSearch';
 import './styles.css'
 import { UsersResponse } from '../../core/types/Users';
+import MyLoader from '../components/Loader';
+
+
 
 const Search = () => {
+   
 
-    const [user, setUser] = useState('gigliozzi');
-
+    // ################# aqui captura o valor digitado pelo usuário
     const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setUser(event.target.value);
     }
+
+    const [user, setUser] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
     }
 
     useEffect(() => {
+            // inicia o loader 
+            setIsLoading(true)
         axios(`https://api.github.com/users/${user}`)
-            .then(response => setUsersResponse(response.data));
+            .then(response => setUsersResponse(response.data))
+            .finally(() => {
+            //finaliza o loader
+            setIsLoading(false)
+            });
     }, [user]);
 
     const [usersResponse, setUsersResponse] = useState<UsersResponse>();
@@ -34,7 +46,7 @@ const Search = () => {
                     <h1>Encontre um perfil Github</h1>
                 </div>
                 <div className="search-box">
-                    <input type="text" id="userInput" value={usersResponse?.login} onChange={handleOnChange} placeholder="Usuário Github" required />
+                    <input type="text" id="userInput" value={usersResponse?.login} onChange={handleOnChange} placeholder="Usuário Github" />
                 </div>
                 <div className="search-button">
                     <ButtonDefault value="Encontrar" type="submit" />
@@ -43,7 +55,9 @@ const Search = () => {
             
             <div className="search-result-container">
                 <div className="box-image">
-                    <img src={usersResponse?.avatar_url} alt="RESULT SEARCH" />
+                    {isLoading ? <MyLoader /> : (
+                        <img src={usersResponse?.avatar_url} alt={usersResponse?.login} />
+                    )}
                 </div>
 
                 <a href={usersResponse?.html_url} target="blank">

@@ -25,7 +25,7 @@
 }
 
 input[type=text] {
-    height: 40px;
+    height: 35px;
     width: 676px;
     font-size: 16px;
     font-weight: 300;
@@ -65,17 +65,15 @@ input[type=text]::placeholder{
 }
 
 .box-image {
-    width: 280px;
-    height: 288px;
-    position: relative;
-    top: 27px;
+   margin-left: 13px;
+    top: 30px;
     left: 23px;
-    border: solid 1px black;
+    position: relative;
 }
 
 .box-image img {
     width: 280px;
-    height: 288px;
+    height: 290px;
 }
 
 .button-container {
