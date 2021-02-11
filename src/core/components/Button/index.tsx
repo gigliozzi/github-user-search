@@ -4,7 +4,7 @@ import './styles.css';
 type Props = {
     value: string;
     type?: string;
-    onclick?: string;
+    onclick?: () => void;
 }
 
 const ButtonDefault = ({value, type, onclick}: Props) => {

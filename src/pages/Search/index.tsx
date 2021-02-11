@@ -1,58 +1,42 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import ButtonDefault from '../../core/components/Button';
-// import ResultSearch from '../../core/components/ResultSearch';
 import './styles.css'
 import { UsersResponse } from '../../core/types/Users';
 import MyLoader from '../components/Loader';
 
 
-
 const Search = () => {
-   
-
-    // ################# aqui captura o valor digitado pelo usuário
-    const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setUser(event.target.value);
-    }
-
-    const [user, setUser] = useState('');
+    
+    const [usersResponse, setUsersResponse] = useState<UsersResponse>();
     const [isLoading, setIsLoading] = useState(false);
+    const [user, setUser] = useState('');
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
-    }
-
-    useEffect(() => {
-            // inicia o loader 
-            setIsLoading(true)
+        setUser(event.target.value);
+        setIsLoading(true)
         axios(`https://api.github.com/users/${user}`)
             .then(response => setUsersResponse(response.data))
-            .finally(() => {
-            //finaliza o loader
-            setIsLoading(false)
-            });
-    }, [user]);
-
-    const [usersResponse, setUsersResponse] = useState<UsersResponse>();
+            .finally(() => setIsLoading(false));
+    }
 
     return (
         <>
-
-            <form onSubmit={handleSubmit}>
+            <form>
                 <div className="search-container">
                 </div>
                 <div className="search-title">
                     <h1>Encontre um perfil Github</h1>
                 </div>
                 <div className="search-box">
-                    <input type="text" id="userInput" value={usersResponse?.login} onChange={handleOnChange} placeholder="Usuário Github" />
+                    <input type="text" value="" onChange={handleOnChange} placeholder="" />
                 </div>
                 <div className="search-button">
                     <ButtonDefault value="Encontrar" type="submit" />
                 </div>
             </form>
-            
+
             <div className="search-result-container">
                 <div className="box-image">
                     {isLoading ? <MyLoader /> : (
