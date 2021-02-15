@@ -4,10 +4,10 @@ import './styles.css';
 type Props = {
     value: string;
     type?: string;
-    onclick?: () => void;
+    onClick?: any;
 }
 
-const ButtonDefault = ({value, type, onclick}: Props) => {
+const ButtonDefault = ({value, type, onClick}: Props) => {
     return (
         <button>
             {value}
