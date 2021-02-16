@@ -14,7 +14,7 @@
     margin: 0;
   }
 
-  ul {
+  ul { 
     list-style-type: none;
     margin-bottom: 0;
     padding-left: 0;
@@ -23,17 +23,3 @@
   a { 
     text-decoration: none;    
   }
-
-
-/* qq coisa apaga a linhas abaixo*/
-/* input
-{
-	margin:0;
-	border:0;
-	padding:0;
-	display:inline-block;
-	vertical-align:middle;
-	white-space:normal;
-	background:none;
-	line-height:1;
-} */
