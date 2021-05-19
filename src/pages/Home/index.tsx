@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import ButtonDefault from '../../core/components/Button';
 import './styles.css';
