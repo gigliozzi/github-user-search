@@ -6,9 +6,9 @@ const Navbar = () => (
     <nav className="main-navbar">
         <div className="logo-container">
             <Link to="/" className="nav-logo-text">
-                <h4 >
-                    Bootcamp DevSuperior
-                </h4>
+                    <h4 >
+                        SoftCode
+                    </h4>
             </Link>
         </div>
     </nav>

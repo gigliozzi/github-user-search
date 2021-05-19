@@ -6,16 +6,15 @@ import './styles.css';
 const Home = () => (
     <div className="home-container">
         <h1>
-            Desafio do Capítulo 3, <br />
-             Bootcamp DevSuperior
+            <img src="" alt="" />
+            Github User Search <br />             
         </h1>
         <>
             <div className="paragraph-container">
-                <p>Bem-vindos ao desafio do capítulo 3 do Bootcamp DevSuperior.</p>
-                <p>Favor observar as instruções passadas no capítulo sobre a elaboração
-                deste projeto.</p>
-                <p>Este design foi adaptado a partir de Ant Design System for Figma, de
-                Mateusz Wierzbicki: <a href="mailto">antforfigma@gmail.com</a></p>
+                <p>Projeto para retornar dados da API do Github</p>
+                <p>Construído com Typescript e ReactJS</p>
+                <p>Usa o Client Axios Http baseado em promisses para comsumir a API</p>
+                <p>Author: <a href="https://github.com/gigliozzi" target="blank">William Gigliozzi</a></p>
             </div>
             <Link to="/search">
                 <ButtonDefault value="Começar" />
