@@ -10,8 +10,9 @@
     font-weight: 400;
   }
 
-  body {
+  body,html {
     margin: 0;
+    width: 100%;
   }
 
   ul { 
@@ -23,3 +24,5 @@
   a { 
     text-decoration: none;    
   }
+
+  

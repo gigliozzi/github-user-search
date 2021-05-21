@@ -1,8 +1,9 @@
 .home-container {
-    width: 612px;
-    height: 560px;
-    margin-top: 103px;
-    margin-left: 120px;
+    width: 80%;
+    max-width: 980px;
+    height: 40%;
+    margin-top: 10%;
+    margin-left: 10%;
     margin-bottom: 50px;
 }
 

@@ -1,8 +1,9 @@
 .main-navbar {
-    width: 97,5%;
+    width: 100%;
+    max-width: 1280px;
     height: 62px;
     background: #1890FF;
-    padding-left: 120px;
+    padding-left: 10%;
 }
 
 .logo-container {   
