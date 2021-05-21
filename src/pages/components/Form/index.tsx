@@ -26,24 +26,20 @@ const Form = () => {
     return (
         <>
             <div className="search-container">
-                <div className="search-title">
-                    <h1>Encontre um perfil Github</h1>
-                </div>
-                <div className="search-box">
-                    <input
-                        type="text"
-                        onChange={handleOnChange}
-                        value={user}
-                        placeholder="username Github"
-                    />
-                </div>
+                <h1>Encontre um perfil Github</h1>
+                <input
+                    type="text"
+                    onChange={handleOnChange}
+                    value={user}
+                    placeholder="username Github"
+                />
                 <div className="search-button">
                     <button
                         value="Encontrar"
                         type="submit"
                         onClick={handleOnClick}
                     >
-                        Encontrar
+                       Go
                     </button>
                 </div>
             </div>
